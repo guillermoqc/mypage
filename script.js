@@ -52,7 +52,7 @@ const products = [
       const cartItem = document.createElement('li');
       cartItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
       cartItem.innerHTML = `
-        Q{item.name} - QQ{item.price.toFixed(2)}
+        ${item.name} - Q{item.price.toFixed(2)}
         <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
       `;
       cartItemsDisplay.appendChild(cartItem);
