@@ -25,7 +25,7 @@ const products = [
           <div class="card-body">
             <h5 class="card-title">${product.name}</h5>
             <p class="card-text">Q${product.price.toFixed(2)}</p>
-            <button class="btn btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
+            <button class="btn btn-primary" onclick="addToCart(Q{product.id})">Add to Cart</button>
           </div>
         </div>
       `;
@@ -52,7 +52,7 @@ const products = [
       const cartItem = document.createElement('li');
       cartItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
       cartItem.innerHTML = `
-        ${item.name} - $${item.price.toFixed(2)}
+        ${item.name} - QQ{item.price.toFixed(2)}
         <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
       `;
       cartItemsDisplay.appendChild(cartItem);
